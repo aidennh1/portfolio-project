@@ -1,5 +1,16 @@
 # Changelog
 
+
+## [2026.02.24]
+- Designed a proof of concept for function component
+- Overloaded constructor for no argument and array of values
+- wrote kernel methods add and f(x)
+- wrote secondary derivative and integral methods
+- provide small main method to show utility
+
+## [2026.02.23]
+- Reworked design descriptions
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),

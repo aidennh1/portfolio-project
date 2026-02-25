@@ -1,8 +1,8 @@
 # Portfolio Part 2: Component Proof-of-Concept
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Aiden Novak-Howgate
+- **Dot Number**: Novak-Howgate.1
+- **Due Date**:2-22-26
 
 ## Assignment Overview
 
@@ -114,9 +114,10 @@ Below is further rationale/explanation for the rubric items above:
 > to create a new design. In you do end up picking one at random, you should
 > disclose that here as well.
 
-<!-- TODO: briefly argue your choice of design or design something
-new; then delete this comment -->
+I will be implementing my earlier described function object. Primarily, I believe that the function object has the best split between kernel and secondary methods. With the use of getYValue and a possible get/remove degree method all secondary methods can be implemented.
+ In addition, I see no specific limitations on the function itself, besides sizing issues that are dependant on the underlying data-structure.
 
+  My complaints with the other two, and reason for not choosing them, are as follows. Many of the matrix methods are dependant on sizing, and im not sure how I would implement something like gaussian implementation for matricies of varrying size. For the statistics component, I feel that most of the methods would be more or less setters and getters with a bit of rudimentary math.
 > Once you've argued your choice of design, make a branch in your new repo called
 > something like `proof-of-concept`. There are many ways to do this, but my
 > preference is to use GitHub Desktop. From there, you can click the `Branch`
@@ -126,7 +127,6 @@ new; then delete this comment -->
 > we'll want a branch that you can later make a pull request from with all
 > your changes.
 
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
