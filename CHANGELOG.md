@@ -2,17 +2,11 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
-## [2026.3.29]
-## Added
-- Added equals(Mathfucntion p) and toString() to MathFunction.java
-- Added all secondary methods to MathFunction abstract class
-## Updated
-- changed derivative and integral returns and paramaters to return and accept doubles.
-- changed scalar parameter to double.
 ## [Unreleased]
 
 - Disabled an aspect of the coderunner extension
