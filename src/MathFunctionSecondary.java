@@ -206,7 +206,7 @@ public abstract class MathFunctionSecondary implements MathFunction {
      * Returns whether this function is equal to the given function.
      *
      * @param p
-     *            the function to compare to this function
+     *            the functio to compare to this function
      * @return true if this function equals p, false otherwise
      * @ensures equals = for all i in larger, coeficient of i == 0. for all i in
      *          larger and smaller larger.coefficeint(i) ==
