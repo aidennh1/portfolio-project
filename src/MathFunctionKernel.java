@@ -38,7 +38,7 @@ public interface MathFunctionKernel extends Standard<MathFunctionKernel> {
      * @ensures coefficient of x = c where degree n = cx^n
      *
      */
-    int coefficient(int degree);
+    double coefficient(int degree);
 
     /**
      * Retirns size of the poloynomial.

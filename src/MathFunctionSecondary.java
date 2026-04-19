@@ -240,4 +240,17 @@ public abstract class MathFunctionSecondary implements MathFunction {
         return isEqual;
     }
 
+    @Override
+    public int hashCode(){
+        int hash = 1;
+        for(int i =0; i<this.size(); i++){
+            double coefficeint = this.coefficient(i);
+            if(!(coefficeint == 0.0)){
+                result = 31 * result + i;
+                result = 31 * this.coefficient(i)
+            }
+        }
+        return hash;
+    }
+
 }

@@ -21,7 +21,8 @@
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "lib/**/*.jar"
+        "lib/**/*.jar",
+        "portfolio-project/lib/components.jar"
     ],
     "java.saveActions.cleanup": true,
     "java.cleanup.actions": [
