@@ -31,8 +31,8 @@ replay_pid*
 .DS_Store
 
 # Render files
-!TreeDiagram.pdf
 *.pdf
+!TreeDiagram.pdf
 *tmp.html
 
 # Folders that will not be committed to the repo, even if private
