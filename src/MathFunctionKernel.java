@@ -38,7 +38,7 @@ public interface MathFunctionKernel extends Standard<MathFunctionKernel> {
      * @ensures coefficient of x = c where degree n = cx^n
      *
      */
-    int coefficient(int degree);
+    double coefficient(int degree);
 
     /**
      * Retirns size of the poloynomial.
@@ -57,4 +57,17 @@ public interface MathFunctionKernel extends Standard<MathFunctionKernel> {
      */
     @Override
     MathFunction newInstance();
+
+    /**
+     * Returns whether this function is equal to the given function.
+     *
+     * @param p
+     *            the functio to compare to this function
+     * @return true if this function equals p, false otherwise
+     * @ensures equals = for all i in larger, coeficient of i == 0. for all i in
+     *          larger and smaller larger.coefficeint(i) ==
+     *          smaller.coefficient(i)
+     */
+    boolean equals(MathFunction p);
+
 }
