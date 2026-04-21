@@ -25,6 +25,7 @@ public class MathFunctionSequence extends MathFunctionSecondary {
      */
     public MathFunctionSequence() {
         this.createNewRep();
+        this.rep.add(0, 0.0);
     }
 
     /**
@@ -47,7 +48,7 @@ public class MathFunctionSequence extends MathFunctionSecondary {
     @Override
     public void add(int degree, double coefficient) {
         if (degree < this.size()) {
-            this.rep.replaceEntry(degree, coefficient);
+            this.rep.replaceEntry(degree, coefficient + this.rep.entry(degree));
         } else {
             for (int i = this.size(); i < degree; i++) {
                 this.rep.add(i, 0.0);

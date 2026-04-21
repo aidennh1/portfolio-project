@@ -23,7 +23,7 @@ public abstract class MathFunctionSecondary implements MathFunction {
     @Override
     public void add(MathFunction a) {
         for (int i = 0; i < a.size(); i++) {
-            this.add(i, a.coefficient(i) + this.coefficient(i));
+            this.add(i, a.coefficient(i));
         }
     }
 
