@@ -1,13 +1,16 @@
+package components.mathfunction;
+
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class MathFunctionTest {
-    //account for error from floating point
-    private final double delta = 0.0005;
-    //KERNEL TESTS
+public class MathFunctionSequenceTest {
+    /**
+     * allowed error due to floating point.
+     */
+    private final double delta = .0005;
 
-    //Add test(term)
     @Test
     public void addtermNonZeroSizeBlankRep() {
         MathFunction f = new MathFunctionSequence();
@@ -103,22 +106,30 @@ public class MathFunctionTest {
         assertEquals(9, f.size());
     }
 
-    //SECONDARY TESTS
+    //Equals tests
+    @Test
+    public void zeroFuncEqual() {
+        MathFunction f1 = new MathFunctionSequence();
+        MathFunction f2 = new MathFunctionSequence();
+        assertTrue(f1.equals(f2));
+    }
 
-    //add(MathFunction) tests
+    @Test
+    public void trailingZeros() {
+        MathFunction f1 = new MathFunctionSequence();
+        MathFunction f2 = new MathFunctionSequence();
 
-    //scale tests
+        f1.add(3, 2);
+        f2.add(3, 2);
+        f2.add(10, 0);
+        assertTrue(f1.equals(f2));
+    }
 
-    //derivative tests
-
-    //Integral tests
-
-    //zeros tests
-
-    //relativeMaxs tests
-
-    //relative mins tests
-
-    //toString tests
-
+    @Test
+    public void testNotEqual() {
+        MathFunction f1 = new MathFunctionSequence();
+        MathFunction f2 = new MathFunctionSequence();
+        f2.add(0, 1);
+        assertTrue(!f1.equals(f2));
+    }
 }

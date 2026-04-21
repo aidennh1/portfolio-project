@@ -1,3 +1,4 @@
+package components.mathfunction;
 
 import components.standard.Standard;
 

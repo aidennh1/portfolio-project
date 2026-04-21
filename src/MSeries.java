@@ -1,6 +1,26 @@
 import java.util.Scanner;
 
-public class MSeries {
+import components.mathfunction.MathFunction;
+import components.mathfunction.MathFunctionSequence;
+
+/**
+ * Maclourin series of sin proof of utility, the same can be done with cos in
+ * turn enabling the user to express any trig function.
+ */
+final class MSeries {
+    /**
+     * Prevent instantiation.
+     */
+    private MSeries() {
+
+    }
+
+    /**
+     *
+     * @param n
+     *            number to find factorial of
+     * @return n!
+     */
     public static double factorial(int n) {
         double sum = 1;
         for (int i = 1; i <= n; i++) {
@@ -9,6 +29,12 @@ public class MSeries {
         return sum;
     }
 
+    /**
+     * Main method.
+     *
+     * @param args
+     *            main method arguments
+     */
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         MathFunction sin = new MathFunctionSequence();

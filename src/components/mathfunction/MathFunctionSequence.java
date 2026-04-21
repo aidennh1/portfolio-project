@@ -1,3 +1,4 @@
+package components.mathfunction;
 
 /*
 * Convention: this.rep is a Sequence<Double> where each entry at index i
@@ -164,6 +165,7 @@ public class MathFunctionSequence extends MathFunctionSecondary {
                 if (larger.coefficient(i) != 0) {
                     equal = false;
                 }
+                i++;
             }
         }
 
@@ -177,7 +179,6 @@ public class MathFunctionSequence extends MathFunctionSecondary {
      * @return hash of this.
      *
      */
-
     @Override
     public int hashCode() {
         int hash = 0;

@@ -1,3 +1,5 @@
+package components.mathfunction;
+
 /**
  * Enhanced interface for MathFunction component.
  *

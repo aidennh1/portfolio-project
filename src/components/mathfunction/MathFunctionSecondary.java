@@ -1,3 +1,4 @@
+package components.mathfunction;
 
 /**
  * Abstract class.
@@ -38,7 +39,7 @@ public abstract class MathFunctionSecondary implements MathFunction {
     @Override
     public void scale(double scalar) {
         for (int i = 0; i < this.size(); i++) {
-            this.add(i, this.coefficient(i) * scalar);
+            this.add(i, this.coefficient(i) * scalar - this.coefficient(i));
         }
     }
 
@@ -104,12 +105,21 @@ public abstract class MathFunctionSecondary implements MathFunction {
                 temp[count++] = x;
             }
         }
-
-        double[] result = new double[count];
-        for (int i = 0; i < count; i++) {
-            result[i] = temp[i];
+        /**
+         * sorry for the double returns in this relativeMax and relativeMin,
+         * java scope sucks and should recognize result array is guaranteed in
+         * the else.
+         */
+        if (count == 0) {
+            return new double[] { -1 };
+        } else {
+            double[] result = new double[count];
+            for (int i = 0; i < count; i++) {
+                result[i] = temp[i];
+            }
+            return result;
         }
-        return result;
+
     }
 
     /**
@@ -138,11 +148,15 @@ public abstract class MathFunctionSecondary implements MathFunction {
             }
         }
 
-        double[] result = new double[count];
-        for (int i = 0; i < count; i++) {
-            result[i] = temp[i];
+        if (count == 0) {
+            return new double[] { -1 };
+        } else {
+            double[] result = new double[count];
+            for (int i = 0; i < count; i++) {
+                result[i] = temp[i];
+            }
+            return result;
         }
-        return result;
     }
 
     /**
@@ -171,11 +185,15 @@ public abstract class MathFunctionSecondary implements MathFunction {
             }
         }
 
-        double[] result = new double[count];
-        for (int i = 0; i < count; i++) {
-            result[i] = temp[i];
+        if (count == 0) {
+            return new double[] { -1 };
+        } else {
+            double[] result = new double[count];
+            for (int i = 0; i < count; i++) {
+                result[i] = temp[i];
+            }
+            return result;
         }
-        return result;
     }
 
     /**
