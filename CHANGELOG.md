@@ -4,7 +4,13 @@
 All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
-the following form: YYYY.0M.0D.
+the following form: YYYY.0M.0D.'
+## [2026.4.22]
+-Worked around double return in 3 methods
+-Fixed checkstyle in tests
+-Moved hashCode from kernel to secondary.
+-Create new rep now initializes with zero coefficient
+-Transfer from clears this before transfering
 ## [2026.4.21]
 -Cleaned file paths to reflect recomended structure.
 -Fixed checkstyle errors in mathFunction components and demos.

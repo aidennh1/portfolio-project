@@ -1,5 +1,7 @@
 package components.mathfunction;
 
+import java.util.Arrays;
+
 /**
  * Abstract class.
  *
@@ -105,20 +107,11 @@ public abstract class MathFunctionSecondary implements MathFunction {
                 temp[count++] = x;
             }
         }
-        /**
-         * sorry for the double returns in this relativeMax and relativeMin,
-         * java scope sucks and should recognize result array is guaranteed in
-         * the else.
-         */
-        if (count == 0) {
-            return new double[] { -1 };
-        } else {
-            double[] result = new double[count];
-            for (int i = 0; i < count; i++) {
-                result[i] = temp[i];
-            }
-            return result;
+        double[] result = new double[] { -1 };
+        if (count != 0) {
+            result = Arrays.copyOf(temp, count);
         }
+        return result;
 
     }
 
@@ -148,15 +141,11 @@ public abstract class MathFunctionSecondary implements MathFunction {
             }
         }
 
-        if (count == 0) {
-            return new double[] { -1 };
-        } else {
-            double[] result = new double[count];
-            for (int i = 0; i < count; i++) {
-                result[i] = temp[i];
-            }
-            return result;
+        double[] result = new double[] { -1 };
+        if (count != 0) {
+            result = Arrays.copyOf(temp, count);
         }
+        return result;
     }
 
     /**
@@ -184,16 +173,11 @@ public abstract class MathFunctionSecondary implements MathFunction {
                 temp[count++] = x;
             }
         }
-
-        if (count == 0) {
-            return new double[] { -1 };
-        } else {
-            double[] result = new double[count];
-            for (int i = 0; i < count; i++) {
-                result[i] = temp[i];
-            }
-            return result;
+        double[] result = new double[] { -1 };
+        if (count != 0) {
+            result = Arrays.copyOf(temp, count);
         }
+        return result;
     }
 
     /**
@@ -256,6 +240,22 @@ public abstract class MathFunctionSecondary implements MathFunction {
         }
 
         return isEqual;
+    }
+
+    /**
+     * computes hash of this.
+     *
+     * @return hash of this
+     */
+    @Override
+    public int hashCode() {
+        // prevent collision to some extent ie 1 + 2x + 3x^2 != 3 + 2x + x^2
+        final int ten = 10;
+        int hash = 0;
+        for (int i = 0; i < this.size(); i++) {
+            hash += ((Double) (this.coefficient(i)) * ten);
+        }
+        return hash;
     }
 
 }

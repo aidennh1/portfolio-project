@@ -34,6 +34,7 @@ public class MathFunctionSequence extends MathFunctionSecondary {
      */
     private void createNewRep() {
         this.rep = new Sequence1L<Double>();
+        this.rep.add(0, 0.0);
     }
 
     /**
@@ -128,6 +129,7 @@ public class MathFunctionSequence extends MathFunctionSecondary {
      */
     @Override
     public void transferFrom(MathFunctionKernel arg0) {
+        this.clear();
         for (int i = 0; i < arg0.size(); i++) {
             this.add(i, arg0.coefficient(i));
         }
@@ -171,21 +173,6 @@ public class MathFunctionSequence extends MathFunctionSecondary {
 
         return equal;
 
-    }
-
-    /**
-     * returns hash of this.
-     *
-     * @return hash of this.
-     *
-     */
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        for (int i = 0; i < this.size(); i++) {
-            hash += this.rep.entry(i).hashCode();
-        }
-        return hash;
     }
 
     /**
