@@ -2,7 +2,8 @@ import components.mathfunction.MathFunction;
 import components.mathfunction.MathFunctionSequence;
 
 /**
- * Proof of utiility calculating the are between two functions.
+ * Proof of utiility calculating the are between two functions. Can be expanded
+ * to find area of shapes w/ shell or washer method.
  */
 final class InnerArea {
     /**
