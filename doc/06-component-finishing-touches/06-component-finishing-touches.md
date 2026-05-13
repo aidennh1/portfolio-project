@@ -307,18 +307,18 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+I feel like this project gave me a better grasp of software develpoment than the prior class projects. The in class projects are never entriely a design of our own, whether it was starting with a half finished skeleton or just a general outline of the task at hand the in class projects were never entirely independantly created. This project was the first time I could say the project was entirely my own, from brainstorming to final implemenattion.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+The main gap this project filled was github/git. I watched a few youtube videos to understand it.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+I still enjoy software development, this project just soldified the joy I take in the creativity and work of it.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -326,26 +326,30 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+This project helped me a good bit with solving issues outside of my code itself. (File/Scope Issues, random VS code errors, impropoer version control)
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+-Diagnosed and resolved development enviorment issues, including but not limited to; file path conflicts, scope related errors, and IDE config issues in VS Code.
+
+-Implemented and maintained version control workflows using Git, including resolving merge issues and managing project history effectively.
+
+-Demonstrated independant technical troubleshooting, identifying and solving infastructure-level problems outside the codebase to maintain development velocity.
+
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+I still like coding, I still like math. Ideally I would work in a field that touches on both.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
-
+This is the first time I've done my own work combining programming, I'd like to try this same concept with other branches of math than calculus. I could contact my foundations prof., as I know he teaches higher level classes dealing with these types of concepts.
 ### Changelog
 
 <!-- TODO: update CHANGELOG then delete this comment -->

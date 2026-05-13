@@ -1,3 +1,6 @@
+package components.mathfunction;
+
+import java.util.Arrays;
 
 /**
  * Abstract class.
@@ -23,7 +26,7 @@ public abstract class MathFunctionSecondary implements MathFunction {
     @Override
     public void add(MathFunction a) {
         for (int i = 0; i < a.size(); i++) {
-            this.add(i, a.coefficient(i) + this.coefficient(i));
+            this.add(i, a.coefficient(i));
         }
     }
 
@@ -38,7 +41,7 @@ public abstract class MathFunctionSecondary implements MathFunction {
     @Override
     public void scale(double scalar) {
         for (int i = 0; i < this.size(); i++) {
-            this.add(i, this.coefficient(i) * scalar);
+            this.add(i, this.coefficient(i) * scalar - this.coefficient(i));
         }
     }
 
@@ -104,12 +107,12 @@ public abstract class MathFunctionSecondary implements MathFunction {
                 temp[count++] = x;
             }
         }
-
-        double[] result = new double[count];
-        for (int i = 0; i < count; i++) {
-            result[i] = temp[i];
+        double[] result = new double[] { -1 };
+        if (count != 0) {
+            result = Arrays.copyOf(temp, count);
         }
         return result;
+
     }
 
     /**
@@ -138,9 +141,9 @@ public abstract class MathFunctionSecondary implements MathFunction {
             }
         }
 
-        double[] result = new double[count];
-        for (int i = 0; i < count; i++) {
-            result[i] = temp[i];
+        double[] result = new double[] { -1 };
+        if (count != 0) {
+            result = Arrays.copyOf(temp, count);
         }
         return result;
     }
@@ -170,10 +173,9 @@ public abstract class MathFunctionSecondary implements MathFunction {
                 temp[count++] = x;
             }
         }
-
-        double[] result = new double[count];
-        for (int i = 0; i < count; i++) {
-            result[i] = temp[i];
+        double[] result = new double[] { -1 };
+        if (count != 0) {
+            result = Arrays.copyOf(temp, count);
         }
         return result;
     }
@@ -238,6 +240,22 @@ public abstract class MathFunctionSecondary implements MathFunction {
         }
 
         return isEqual;
+    }
+
+    /**
+     * computes hash of this.
+     *
+     * @return hash of this
+     */
+    @Override
+    public int hashCode() {
+        // prevent collision to some extent ie 1 + 2x + 3x^2 != 3 + 2x + x^2
+        final int ten = 10;
+        int hash = 0;
+        for (int i = 0; i < this.size(); i++) {
+            hash += ((Double) (this.coefficient(i)) * ten);
+        }
+        return hash;
     }
 
 }

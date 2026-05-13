@@ -4,9 +4,26 @@
 All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
-the following form: YYYY.0M.0D.
-##
-Fixed logic error in intergral
+the following form: YYYY.0M.0D.'
+## [2026.4.22]
+-Worked around double return in 3 methods
+-Fixed checkstyle in tests
+-Moved hashCode from kernel to secondary.
+-Create new rep now initializes with zero coefficient
+-Transfer from clears this before transfering
+## [2026.4.21]
+-Cleaned file paths to reflect recomended structure.
+-Fixed checkstyle errors in mathFunction components and demos.
+## [2026.4.20]
+-Changed add kernel method to actually add isntead of replace coefficients
+-Constructor now initiializes rep with a 0 in first degree to avoid zero function errors
+-Test methods for kernel methods
+-Fixed an issue where if zeros/relativeMax/relativeMin was called on a function where there were no zeros over the range, a null pointer would be created. now returns [-1].
+-Test methods for secondary methods
+## [2026.4.19]
+-Cleaned tooString method - toString no longer prints 0 coefficients, no longer prints a trailing plus sign
+-Maclurin series of sinx proof of utility
+-Area between functions proof of utility
 
 ## [2026.3.29]
 ## Added
